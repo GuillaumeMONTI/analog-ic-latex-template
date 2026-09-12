@@ -1,0 +1,92 @@
+% !TeX root = ../main.tex
+
+\section{Tables}
+
+This section demonstrates the table style used throughout
+the technical reports.
+
+The notation and unit conventions introduced in
+Section~\ref{sec:equations_units} are also used in the following tables.
+
+\subsection{Design Specifications}
+
+Table~\ref{tab:specifications} summarizes the main design targets.
+
+\begin{table}[htbp]
+	\centering
+	
+	\caption{Example design specifications.}
+	\label{tab:specifications}
+	
+	\begin{tabular}{lll}
+		\toprule
+		Parameter & Target & Unit \\
+		\midrule
+		Supply voltage      & 1.8  & V   \\
+		DC gain             & 60   & dB  \\
+		Unity-gain bandwidth & 100  & MHz \\
+		Load capacitance    & 2    & pF  \\
+		Bias current        & 2.5  & \textmu A \\
+		\bottomrule
+	\end{tabular}
+	
+\end{table}
+
+\subsection{Extended Specification Table}
+
+\begin{table}[htbp]
+	\centering
+	
+	\caption{Extended design specification summary.}
+	\label{tab:extended_specifications}
+	
+	\begin{tabularx}{\textwidth}{l l X}
+		\toprule
+		Parameter & Target & Description \\
+		\midrule
+		
+		Supply voltage
+		& \qty{1.8}{\volt}
+		& Nominal supply used during initial transistor-level design. \\
+		
+		DC gain
+		& \qty{60}{\deci\bel}
+		& Minimum open-loop low-frequency voltage gain. \\
+		
+		Unity-gain bandwidth
+		& \qty{100}{\mega\hertz}
+		& Target small-signal unity-gain frequency under nominal loading. \\
+		
+		Load capacitance
+		& \qty{2}{\pico\farad}
+		& Nominal capacitive load connected to the amplifier output. \\
+		
+		\bottomrule
+	\end{tabularx}
+	
+\end{table}
+
+\subsection{Simulation Results}
+
+\begin{table}[htbp]
+	\centering
+	
+	\caption{Example simulation results.}
+	\label{tab:simulation_results}
+	
+	\begin{tabular}{l S S S}
+		\toprule
+		Corner
+		& {DC Gain (dB)}
+		& {GBW (MHz)}
+		& {Phase Margin (deg)} \\
+		\midrule
+		
+		TT & 95.21 & 103.4 & 63.2 \\
+		SS & 89.43 & 91.7  & 67.8 \\
+		FF & 98.82 & 118.6 & 58.9 \\
+		
+		\bottomrule
+	\end{tabular}
+	
+\end{table}

@@ -1,0 +1,54 @@
+% !TeX root = ../main.tex
+
+\section{Large Figures}
+
+This section demonstrates the handling of large technical figures.
+
+\subsection{Portrait Figure}
+
+Figure~\ref{fig:full_schematic} shows a large schematic displayed
+on a dedicated portrait page.
+
+\clearpage
+
+\begin{figure}[p]
+	\centering
+	
+	\includegraphics[
+	width=\textwidth,
+	height=0.82\textheight,
+	keepaspectratio
+	]{test_schematic.png}
+	
+	\caption{Complete transistor-level schematic.}
+	\label{fig:full_schematic}
+\end{figure}
+
+\clearpage
+
+
+\subsection{Landscape Figure}
+
+Figure~\ref{fig:wide_architecture} illustrates a schematic requiring
+a landscape page.
+
+\clearpage
+
+\begin{landscape}
+	
+	\begin{figure}[p]
+		\centering
+		
+		\includegraphics[
+		width=\linewidth,
+		height=0.82\textheight,
+		keepaspectratio
+		]{test_schematic.png}
+		
+		\caption{Complete analog architecture.}
+		\label{fig:wide_architecture}
+	\end{figure}
+	
+\end{landscape}
+
+\clearpage

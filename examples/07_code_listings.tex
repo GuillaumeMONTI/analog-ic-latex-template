@@ -1,0 +1,56 @@
+% !TeX root = ../main.tex
+
+\section{Code Listings}
+
+Code excerpts can be embedded directly in the technical report.
+
+\subsection{SystemVerilog}
+
+\begin{lstlisting}[
+	style=engineering,
+	language=Verilog,
+	caption={Example POR behavioral model.},
+	label={lst:por_example}
+	]
+	module por_vdd (
+	input wire porlow,
+	output reg por_n
+	);
+	
+	initial begin
+	por_n = 1'b0;
+	end
+	
+	always @(posedge porlow) begin
+	por_n <= 1'b1;
+	end
+	
+	endmodule
+\end{lstlisting}
+
+The implementation shown in \Cref{lst:por_example}
+illustrates the formatting used for HDL excerpts.
+
+\subsection{Terminal Commands}
+
+\begin{lstlisting}[style=terminal]
+	cd ~/Documents/project_adc
+	make clean
+	make
+\end{lstlisting}
+
+\subsection{SPICE Netlist}
+
+\begin{lstlisting}[
+	style=engineering,
+	language=SPICE,
+	caption={Example AC-analysis netlist.},
+	label={lst:spice_ac}
+	]
+	* OTA AC simulation
+	VDD vdd 0 1.8
+	VIN vin 0 AC 1
+	
+	.ac dec 100 1 1G
+	.end
+\end{lstlisting}

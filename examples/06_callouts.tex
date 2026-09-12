@@ -1,0 +1,49 @@
+% !TeX root = ../main.tex
+
+\section{Technical Callouts}
+
+The following environments are used to highlight important
+engineering information.
+
+The intrinsic gain of a MOS transistor is fundamentally related
+to its transconductance and output resistance
+\cite{razavi_design_2017}.
+
+\begin{designobjective}
+	
+	Achieve a minimum DC gain of \qty{60}{\deci\bel} and a unity-gain
+	bandwidth of at least \qty{100}{\mega\hertz}.
+	
+\end{designobjective}
+
+
+\begin{assumption}
+	
+	The ideal model initially neglects transistor parasitic capacitances.
+	
+\end{assumption}
+
+
+\begin{designnote}
+	
+	The ideal architecture is validated before replacing functional
+	blocks with transistor-level implementations.
+	
+\end{designnote}
+
+
+\begin{keyresult}
+	
+	The nominal simulation achieves a DC gain of
+	\qty{67.2}{\deci\bel} and a phase margin of
+	\qty{63.4}{\degree}.
+	
+\end{keyresult}
+
+
+\begin{designconstraint}
+	
+	The circuit must remain functional at a supply voltage of
+	\qty{1.0}{\volt}.
+	
+\end{designconstraint}

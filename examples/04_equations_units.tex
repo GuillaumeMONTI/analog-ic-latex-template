@@ -1,0 +1,42 @@
+% !TeX root = ../main.tex
+
+\section{Equations and Units}
+\label{sec:equations_units}
+This section demonstrates the mathematical notation used throughout
+the design reports.
+
+The target supply voltage is \SI{1.8}{\volt}, while the nominal bias
+current is \SI{2.5}{\micro\ampere}.
+
+The target gain is \SI{60}{\deci\bel} and the target unity-gain
+bandwidth is \SI{100}{\mega\hertz}.
+
+\subsection{Intrinsic Gain}
+
+The intrinsic gain of a MOS transistor can be approximated by
+
+\begin{equation}
+	A_v = g_m r_o
+	\label{eq:intrinsic_gain}
+\end{equation}
+
+As shown in Equation~\ref{eq:intrinsic_gain}, increasing either
+transconductance or output resistance increases the intrinsic gain.
+
+\subsection{Transconductance Efficiency}
+
+A useful design quantity is the transconductance efficiency
+
+\begin{equation}
+	\frac{g_m}{I_D}
+	\label{eq:gm_id}
+\end{equation}
+
+which is widely used when selecting an inversion level.
+
+\subsection{Example Operating Conditions}
+
+The circuit is evaluated over a supply range of
+\SIrange{1.1}{3.3}{\volt}
+and a temperature range of
+\SIrange{-40}{125}{\degreeCelsius}.
